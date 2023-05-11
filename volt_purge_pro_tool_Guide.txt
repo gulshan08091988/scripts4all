@@ -1,0 +1,29 @@
+Overview:
+This script is used to purge data from VoltDB. The user can enter the name of the stored procedure they want to create to delete data based on various parameters, such as table name, column name, and data pattern. The script also provides the option to delete data with the same column name and pattern on multiple tables. Additionally, the user can schedule a task to run the stored procedure at a specific time.
+
+Prerequisites:
+
+VoltDB should be installed on the machine where this script will be executed.
+The bin directory of the VoltDB installation should be added to the PATH environment variable.
+
+Script Input Parameters:
+
+CREATETASK: Use this option to create a stored procedure and schedule a task to run it at a specific time.
+Any other value(DROPTASK, DELETETASK) : Use this option to create a stored procedure to delete data based on various parameters.
+Script Output:
+
+A stored procedure is created with the specified parameters.
+A task is scheduled to run the stored procedure at the specified time.
+Steps to use the script:
+
+Open a terminal window.
+Navigate to the directory where the script is located.
+Enter the following command to execute the script:
+./Volt_purge_pro.sh <option>
+Replace <option> with either CREATETASK or any other value depending on your requirement.
+Follow the prompts displayed on the screen to enter the required parameters.
+The script will generate a stored procedure and prompt the user whether to load the procedure into the database.
+If the user chooses to load the procedure, the script will generate a task to run the procedure at a specified time.
+If the user chooses to schedule a task, the script will prompt the user for the task name, hour, and minute.
+The task will run the stored procedure at the specified time to delete data from VoltDB.
+Note: Make sure that the user executing the script has the required permissions to perform the specified operations on the database.

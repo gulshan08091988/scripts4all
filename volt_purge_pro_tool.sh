@@ -3,6 +3,7 @@
 # Script Name: Volt_purge_pro.sh                                                                    #
 #                                                                                                   #
 # Description: This script is used to purge data                                                    #
+# Note:- TABLE on which you are performing bulk deletion needs to be partitioned.
 #                                                                                                   #
 # Owner: Gulshan Sharma                                                                             #
 # Email Id: gsharma@voltactivedata.com                                                              #
@@ -71,7 +72,7 @@ if [[ $choice =~ ^[yY]$ ]]; then
            done
 
             # Prompt user for task names, hour and minute
-            ctime=`sqlcmd --query="select now from votes limit 1;"`
+            ctime=`sqlcmd --query="select now from $tables limit 1;"`
             echo "current time is $ctime"
             read -p "Enter task name: " task
             read -p "Enter hour for manualcleanup task: " hour

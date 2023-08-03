@@ -1,10 +1,14 @@
 Overview:
-This script is used to purge data from VoltDB. The user can enter the name of the stored procedure they want to create to delete data based on various parameters, such as table name, column name, and data pattern. The script also provides the option to delete data with the same column name and pattern on multiple tables. Additionally, the user can schedule a task to run the stored procedure at a specific time.
+This script is used to purge data from VoltDB. The user can enter the name of the stored procedure they want to create to delete data based on various parameters, 
+such as table name, column name, and data pattern. The script also provides the option to delete data with the same column name and pattern on multiple tables. 
+Additionally, the user can schedule a task to run the stored procedure at a specific time. 
+
 
 Prerequisites:
 
 VoltDB should be installed on the machine where this script will be executed.
 The bin directory of the VoltDB installation should be added to the PATH environment variable.
+TABLE needs to be partitoned.
 
 Script Input Parameters:
 
